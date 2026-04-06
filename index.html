@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>國泰銀行（教學示範）</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  國泰銀行（教學示範）
+</div>
+
+<div class="main">
+
+  <div class="left">
+    <div class="info">
+      <h1>安全驗證系統</h1>
+      <p>✔ 本頁為資安教學模擬</p>
+      <p>✔ 不會傳送任何資料</p>
+      <p>✔ 請勿輸入真實帳密</p>
+    </div>
+  </div>
+
+  <div class="right">
+
+    <!-- Login -->
+    <div class="card" id="loginBox">
+      <h2>登入</h2>
+      <div class="warning">⚠ 教學用途</div>
+      <input id="user" placeholder="帳號">
+      <input id="pass" type="password" placeholder="密碼">
+      <button onclick="login()">登入</button>
+      <p id="msg"></p>
+    </div>
+
+    <!-- Loading -->
+    <div class="card hidden" id="loadingBox">
+      <div class="spinner"></div>
+      <p style="text-align:center;">驗證中...</p>
+    </div>
+
+    <!-- OTP -->
+    <div class="card hidden" id="otpBox">
+      <h2>簡訊驗證</h2>
+      <input id="otp" placeholder="輸入驗證碼 (123456)">
+      <button onclick="verifyOTP()">確認</button>
+      <p id="otpMsg"></p>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
